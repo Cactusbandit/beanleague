@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+  </head>
+  <body style="background-color:#eadbc5;">
+  	<div style="width:75%;">
+	<div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+		<div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+			<div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div>
+		<div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+			<div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+	<canvas id="tendiechart" width="1012" height="506" class="chartjs-render-monitor" style="display: block; width: 1012px; height: 506px;"></canvas>
+	<script>
+	var ctx = document.getElementById("tendiechart").getContext('2d');
+	var tendiechart = new Chart(ctx, {
+		type: 'line',
+		data: {
+			labels: ["Week 0", "Week 1", "Week 2", "Week 3", "Week 4", "Week 5", 
+			"Week 6", "Week 7", "Week 8",],
+			datasets: [{
+				label: 'Bronze',
+				backgroundColor: '#60492C',
+				borderColor: '#60492C',
+				data: [10, 10],
+				borderDash: [5,3],
+				fill:false,
+			},
+			{
+				label: 'Iron',
+				backgroundColor: '#635c5b',
+				borderColor: '#635c5b',
+				data: [20, 20],
+				borderDash: [5,3],
+				fill:false,
+			},
+			{
+				label: 'Steel',
+				backgroundColor: '#908686',
+				borderColor: '#908686',
+				data: [30, 30],
+				borderDash: [5,3],
+				fill:false,
+			},
+			{
+				label: 'Mithril',
+				backgroundColor: '#4c4c70',
+				borderColor: '#4c4c70',
+				data: [40, 40],
+				borderDash: [5,3],
+				fill:false,
+			},
+			{
+				label: 'Adamant',
+				backgroundColor: '#506450',
+				borderColor: '#506450',
+				data: [50, 50],
+				borderDash: [5,3],
+				fill:false,
+			},
+			{
+				label: 'Rune',
+				backgroundColor: '#506c77',
+				borderColor: '#506c77',
+				data: [60, 60],
+				borderDash: [5,3],
+				fill:false,
+			},
+			{
+				label: 'Dragon',
+				backgroundColor: '#801a0d',
+				borderColor: '#801a0d',
+				data: [70, 70],
+				borderDash: [5,3],
+				fill:false,
+			},
+			{
+				label: 'Cactusbandit',
+				backgroundColor: "#A330C9",
+				borderColor: "#A330C9",
+				data: [],
+				fill:false,
+			}
+			]
+		},
+		options: {
+			scales: {
+				yAxes: [{
+					scaleLabel: {
+						display: true,
+						labelString: 'League Points'
+					}
+				}]
+			},
+			title: {
+				display: true,
+				text: 'Trailblazer Reloaded: Bean League Hiscores'
+			},
+			legend: {
+				display: false
+			},
+			tooltips: {
+				itemSort: (a, b, data) => b.yLabel - a.yLabel,
+				mode: 'index',
+				intersect: true,
+			}
+		}
+	});
+	
+	</script>
+  </body>
+
+</html>
