@@ -12,6 +12,15 @@
 			<div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
 	<canvas id="tendiechart" width="1012" height="506" class="chartjs-render-monitor" style="display: block; width: 1012px; height: 506px;"></canvas>
 	<script>
+	const unranked = "#E97EBD";
+	const bronze = '#A0522D';
+	const iron = '#635c5b';
+	const steel = '#908686';
+	const mithril = '#4B0082';
+	const adamant = '#228B22';
+	const rune = '#00CEd1';
+	const dragon = '#801a0d';
+	
 	var ctx = document.getElementById("tendiechart").getContext('2d');
 	var tendiechart = new Chart(ctx, {
 		type: 'line',
@@ -20,135 +29,135 @@
 			"Week 6", "Week 7", "Week 8",],
 			datasets: [{
 				label: '----BRONZE----',
-				backgroundColor: '#A0522D',
-				borderColor: '#A0522D',
+				backgroundColor: bronze,
+				borderColor: bronze,
 				data: [2500,2500,2500,2500,2500,2500,2500,2500,2500],
 				borderDash: [5,3],
 				fill:false,
 			},
 			{
 				label: '----IRON----',
-				backgroundColor: '#635c5b',
-				borderColor: '#635c5b',
+				backgroundColor: iron,
+				borderColor: iron,
 				data: [5000,5000,5000,5000,5000,5000,5000,5000,5000],
 				borderDash: [5,3],
 				fill:false,
 			},
 			{
 				label: '----STEEL----',
-				backgroundColor: '#908686',
-				borderColor: '#908686',
+				backgroundColor: steel,
+				borderColor: steel,
 				data: [10000,10000,10000,10000,10000,10000,10000,10000,10000],
 				borderDash: [5,3],
 				fill:false,
 			},
 			{
 				label: '----MITHRIL----',
-				backgroundColor: '#4B0082',
-				borderColor: '#4B0082',
+				backgroundColor: mithril,
+				borderColor: mithril,
 				data: [18000,18000,18000,18000,18000,18000,18000,18000,18000],
 				borderDash: [5,3],
 				fill:false,
 			},
 			{
 				label: '----ADAMANT----',
-				backgroundColor: '#506450',
-				borderColor: '#506450',
+				backgroundColor: adamant,
+				borderColor: adamant,
 				data: [28000,28000,28000,28000,28000,28000,28000,28000,28000],
 				borderDash: [5,3],
 				fill:false,
 			},
-			<!-- { -->
-				<!-- label: '----RUNE----', -->
-				<!-- backgroundColor: '#506c77', -->
-				<!-- borderColor: '#506c77', -->
-				<!-- data: [42000,42000,42000,42000,42000,42000,42000,42000,42000], -->
-				<!-- borderDash: [5,3], -->
-				<!-- fill:false, -->
-			<!-- }, -->
+			{
+				label: '----RUNE----',
+				backgroundColor: rune,
+				borderColor: rune,
+				data: [42000,42000,42000,42000,42000,42000,42000,42000,42000],
+				borderDash: [5,3],
+				fill:false,
+			},
 			<!-- { -->
 				<!-- label: '----DRAGON----', -->
-				<!-- backgroundColor: '#801a0d', -->
-				<!-- borderColor: '#801a0d', -->
+				<!-- backgroundColor: dragon, -->
+				<!-- borderColor: dragon, -->
 				<!-- data: [56000,56000,56000,56000,56000,56000,56000,56000,56000], -->
 				<!-- borderDash: [5,3], -->
 				<!-- fill:false, -->
 			<!-- }, -->
 			{
 				label: 'GIM_IritLeaf',
-				backgroundColor: "#A0522D",
-				borderColor: "#A0522D",
-				data: [0,3930],
+				backgroundColor: iron,
+				borderColor: iron,
+				data: [0,3930,6100],
 				fill:false,
 			},
 			{
 				label: 'GIM_OakLogs',
-				backgroundColor: "#635c5b",
-				borderColor: "#635c5b",
-				data: [0,9670],
+				backgroundColor: mithril,
+				borderColor: mithril,
+				data: [0,9670,24270],
 				fill:false,
 			},
 			{
 				label: 'GIM_SodaAsh',
-				backgroundColor: "#635c5b",
-				borderColor: "#635c5b",
-				data: [0,7180],
+				backgroundColor: steel,
+				borderColor: steel,
+				data: [0,7180,15220],
 				fill:false,
 			},
 			{
 				label: 'GIM_PartyHat',
-				backgroundColor: "#A0522D",
-				borderColor: "#A0522D",
-				data: [0,4090],
+				backgroundColor: bronze,
+				borderColor: bronze,
+				data: [0,4090,4890],
 				fill:false,
 			},
 			{
 				label: 'GIM_Sawdust',
-				backgroundColor: "#4B0082",
-				borderColor: "#4B0082",
-				data: [0,18400],
+				backgroundColor: adamant,
+				borderColor: adamant,
+				data: [0,18400,40220],
 				fill:false,
 			},
 			{
 				label: 'Solo Tetsu',
-				backgroundColor: "#908686",
-				borderColor: "#908686",
-				data: [0,11590],
+				backgroundColor: mithril,
+				borderColor: mithril,
+				data: [0,11590,26080],
 				fill:false,
 			},
 			{
 				label: 'tnorth1998',
-				backgroundColor: "#E97EBD",
-				borderColor: "#E97EBD",
-				data: [0,1770],
+				backgroundColor: bronze,
+				borderColor: bronze,
+				data: [0,1770,2870],
 				fill:false,
 			},
 			{
 				label: 'Hylian_Loach',
-				backgroundColor: "#E97EBD",
-				borderColor: "#E97EBD",
-				data: [0,1060],
+				backgroundColor: bronze,
+				borderColor: bronze,
+				data: [0,1060,2710],
 				fill:false,
 			},
 			{
 				label: 'Lombres',
-				backgroundColor: "#635c5b",
-				borderColor: "#635c5b",
-				data: [0,9070],
+				backgroundColor: steel,
+				borderColor: steel,
+				data: [0,9070,15720],
 				fill:false,
 			},
 			{
 				label: 'Trailblzr910',
-				backgroundColor: "#E97EBD",
-				borderColor: "#E97EBD",
-				data: [0,690],
+				backgroundColor: unranked,
+				borderColor: unranked,
+				data: [0,690,1090],
 				fill: false,
 			},
 			{
 				label: '0niDragon',
-				backgroundColor: "#635c5b",
-				borderColor: "#635c5b",
-				data: [0,8400],
+				backgroundColor: steel,
+				borderColor: steel,
+				data: [0,8400,15970],
 				fill: false,
 			}
 			]
